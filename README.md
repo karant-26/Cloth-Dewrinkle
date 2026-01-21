@@ -131,11 +131,12 @@ Mixed Precision (AMP)
 - Reduces memory usage significantly for 2048 px patches
 
 
-Training Configuration
+## Training Configuration
 
-Defined inside main():
+Defined inside `main()`:
 
-```args = {
+```python
+args = {
     'image_dir': '/workspace/original',
     'gt_dir': '/workspace/retouch/',
     'num_epochs': 200,
@@ -150,11 +151,13 @@ Defined inside main():
     'pretrained_path': ''
 }
 
+
 Adjust batch size carefully.
 2048 px patches are extremely memory-heavy.
 
 Running Training:
-
-```python trainer.py
+ 
+ ```
+`python trainer.py`
 
 
