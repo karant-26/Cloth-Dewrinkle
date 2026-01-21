@@ -27,9 +27,9 @@ The setup is designed to handle **very large images** by training on overlapping
 
 ## Project Structure
 
-├── trainer.py # Full training pipeline (DDP, dataset, losses, logging)
-├── model.py # ABPN architecture (retouch + mask prediction)
-├── README.md
+| trainer.py # Full training pipeline (DDP, dataset, losses, logging)
+| model.py # ABPN architecture (retouch + mask prediction)
+| README.md
 
 
 
@@ -109,12 +109,12 @@ This produces a **soft supervision mask**, resized to half resolution for traini
 
 ### Default Loss Weights
 
-Masked L1        = 1.3
-Masked Edge      = 1.0
-Perceptual       = 0.5
-High-Frequency   = 0.7
-Global L1        = 1.0
-Dice (Mask)      = 1.0
+- Masked L1        = 1.3
+- Masked Edge      = 1.0
+- Perceptual       = 0.5
+- High-Frequency   = 0.7
+- Global L1        = 1.0
+- Dice (Mask)      = 1.0
 
 
 Distributed Training
@@ -148,14 +148,13 @@ Defined inside main():
     'mask_threshold': 3,
     'sample_save_freq': 1,
     'pretrained_path': ''
-}```
+}
 
 Adjust batch size carefully.
 2048 px patches are extremely memory-heavy.
 
-
 Running Training:
 
-```python trainer.py```
+```python trainer.py
 
 
