@@ -109,7 +109,6 @@ This produces a **soft supervision mask**, resized to half resolution for traini
 
 ### Default Loss Weights
 
-```text
 Masked L1        = 1.3
 Masked Edge      = 1.0
 Perceptual       = 0.5
